@@ -1,3 +1,8 @@
 spring:
   application:
     name: library-gateway
+book-rabbitmq:
+  exchange: book-direct-exchange
+  createRoute: book-create-route
+  updateRoute: book-update-route
+  deleteRoute: book-delete-route
