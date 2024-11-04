@@ -12,7 +12,7 @@ public interface BookService {
 
     BookResponse findBookById(UUID id);
 
-    List<BookResponse> findBooks(int limit, long offset);
+    List<BookResponse> findBooks(int page, int pageSize);
 
     void updateBook(UUID id, UpdateBookRequest request);
 
