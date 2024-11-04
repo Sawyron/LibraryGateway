@@ -5,4 +5,6 @@ book-rabbitmq:
   exchange: book-direct-exchange
   createRoute: book-create-route
   updateRoute: book-update-route
-  deleteRoute: book-delete-route
+  deleteRoute: book-delete-rout
+book-service:
+  url: ${BOOK_SERVICE_URL}
