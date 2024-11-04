@@ -11,3 +11,7 @@ book-rabbitmq:
 book-service:
   url: url
 ```
+
+Related microservices:
+
+- [Book service](https://github.com/Sawyron/LibraryBookService)
