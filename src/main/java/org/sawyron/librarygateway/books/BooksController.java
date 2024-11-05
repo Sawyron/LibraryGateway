@@ -1,5 +1,6 @@
 package org.sawyron.librarygateway.books;
 
+import jakarta.validation.Valid;
 import org.sawyron.librarygateway.books.dtos.BookResponse;
 import org.sawyron.librarygateway.books.dtos.CreateBookRequest;
 import org.sawyron.librarygateway.books.dtos.UpdateBookRequest;
@@ -19,7 +20,7 @@ public class BooksController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createBook(@RequestBody CreateBookRequest request) {
+    public ResponseEntity<?> createBook(@RequestBody @Valid CreateBookRequest request) {
         bookService.createBook(request);
         return ResponseEntity.noContent().build();
     }
@@ -37,7 +38,7 @@ public class BooksController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<?> updateBookById(@PathVariable UUID id, @RequestBody UpdateBookRequest request) {
+    public ResponseEntity<?> updateBookById(@PathVariable UUID id, @RequestBody @Valid UpdateBookRequest request) {
         bookService.updateBook(id, request);
         return ResponseEntity.noContent().build();
     }
