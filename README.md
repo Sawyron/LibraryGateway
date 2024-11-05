@@ -60,3 +60,5 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_DB: ${DB_NAME}
 ```
+
+Swagger url: http://host:port/swagger-ui/index.html
